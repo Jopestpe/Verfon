@@ -1,0 +1,50 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: Arial;
+}
+#Barra{
+  display: flex;
+  overflow-y: auto;
+  border-bottom: 0.3vh solid rgb(233, 233, 233);
+}
+.Opcao{
+  text-align: center;
+  margin: 1vh 1vw 1vw 1vh;
+}
+.Opcao h4{
+  margin: 0;
+}
+.Opcao input[type="file"] {
+  display: none;
+}
+.Opcao button {
+  margin-top: 1vh;
+  text-align: center;
+  font-weight: bold;
+  height: 3.5vh;
+  width: 100%;
+  cursor: pointer;
+  border: none;
+  background-color:rgb(47, 183, 42);
+  color:rgb(255, 255, 255);
+}
+.Opcao input{
+  margin-top: 1vh;
+  text-align: center;
+  height: 3vh;
+  width: 100%;
+  cursor: pointer;
+  border: none;
+  background-color:rgb(255, 255, 255);
+  color:rgb(0, 0, 0);
+  border: 0.3vh solid rgb(233, 233, 233);
+} 
+.Opcao input[type="color"] {
+  margin-top: 0.5vh;
+  height: 4.5vh;
+  border: none;
+}
+#Caracteres {
+  text-align: center;
+}
