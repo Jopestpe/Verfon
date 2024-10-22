@@ -3,6 +3,7 @@
 <html lang="pt-br">
   <head>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="Cache-Control" content="max-age=31536000">
     <meta name="description" content="Vizualizar fontes">
     <title>Verfon</title>
     <link rel="icon" type="image/svg+xml" href="icone.svg" />
@@ -13,35 +14,35 @@
 <body>
     <div class="barra">
         <input id="EntradaDeArquivo" type="file" multiple>
-        <button class="barra_opcao" id="BotaoEntradaDeArquivo">Importar fonte</button>
+        <button aria-label="importar fonte" class="barra_opcao" id="BotaoEntradaDeArquivo">Importar fonte</button>
         <div class="barra_opcao"> 
-            <button class="seta" id="pagina_anterior">◀</button>
-            <input id="PaginasDeCaractere" type="number" value="1" min="1">
-            <button class="seta" id="proxima_pagina">▶</button>
+            <button aria-label="página anterior" class="seta" id="pagina_anterior">◀</button>
+            <input id="PaginasDeCaractere" type="number" value="1" min="1" aria-label="Páginas de caractere">
+            <button aria-label="proxima página" class="seta" id="proxima_pagina">▶</button>
         </div>
         <div class="barra_opcao"> 
-            <button class="seta" id="tamanho_caracter_menos">◀</button>
-            <input id="TamanhoDosCaracteres" type="number" value="44" min="1">
-            <button class="seta" id="tamanho_caracter_mais">▶</button>
+            <button aria-label="diminuir caracter" class="seta" id="tamanho_caracter_menos">◀</button>
+            <input id="TamanhoDosCaracteres" type="number" value="44" min="1" aria-label="Tamanho dos caracteres">
+            <button aria-label="aumentar caracter" class="seta" id="tamanho_caracter_mais">▶</button>
         </div>
         <div class="barra_opcao"> 
-            <button class="seta" id="tamanho_contorno_menos">◀</button>
-            <input id="TamanhoDoContorno" type="number" value="0" min="0">
-            <button class="seta" id="tamanho_contorno_mais">▶</button>
+            <button aria-label="aumentar contorno" class="seta" id="tamanho_contorno_menos">◀</button>
+            <input id="TamanhoDoContorno" type="number" value="0" min="0" aria-label="Tamanho do contorno">
+            <button aria-label="diminuir contorno" class="seta" id="tamanho_contorno_mais">▶</button>
         </div>
 
-        <button id="BotaoCorDosCaracteres" type="color"></button>
+        <button aria-label="cor dos caracteres" id="BotaoCorDosCaracteres" type="color"></button>
         <input id="CorDosCaracteres" type="color">
-        <button id="BotaoCorDeFundo" type="color"></button>
+        <button aria-label="cor de fundo dos caracteres" id="BotaoCorDeFundo" type="color"></button>
         <input id="CorDeFundo" type="color">
-        <button id="BotaoCorDoContorno" type="color"></button>
+        <button aria-label="cor do contorno dos caracteres" id="BotaoCorDoContorno" type="color"></button>
         <input id="CorDoContorno" type="color">
 
         <select class="barra_opcao" id="selecionar_fonte" onchange="alterar_fonte()">
             <option value="">Fonte padrão</option>
         </select>
     </div>
-    <textarea id="Caracteres"></textarea>
+    <textarea id="Caracteres" aria-label="Caracteres"></textarea>
 </body>
 
 </html>
