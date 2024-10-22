@@ -1,6 +1,6 @@
 # Verfon 
 
-Verfon é um pagina para carregar e visualizar caracteres
+Verfon é uma página para carregar e visualizar caracteres
 
 ### No Verfon é possível ⤵️
 
