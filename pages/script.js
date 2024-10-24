@@ -31,7 +31,6 @@ EntradaDeArquivo.addEventListener('change', () => {
 });
 // Função para adicionar a fonte ao select
 function adicionar_fonte(arquivo,primeira) {
-    localStorage.setItem(`fontes_locais/${arquivo.name}`, arquivo);
     const option = document.createElement("option");
     const nome = arquivo.name.split('.').slice(0, -1).join('.');
     option.value = nome
