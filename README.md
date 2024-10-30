@@ -16,6 +16,10 @@ Verfon é uma página para carregar e visualizar caracteres
 - ✅ Comparar fontes
 - ✅ Verificar contraste para acessibilidade visual
 
+## Verfon pode ser uma alternativa para
+
+- [Adobe color contrast analyzar](https://color.adobe.com/pt/create/color-contrast-analyzer)
+
 #### Outros links
 
  - [W3 WCAG](https://www.w3.org/Translations/WCAG20-pt-br/)
