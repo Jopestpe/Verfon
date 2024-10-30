@@ -13,5 +13,9 @@ Verfon é uma página para carregar e visualizar caracteres
 - ✅ Trocar cor do fundo dos caracteres
 - ✅ Trocar cor da borda dos caracteres
 - ✅ Trocar entre fontes importadas
-- ❌ Comparar fontes
-- ❌ Verificar contraste para acessibilidade visual
+- ✅ Comparar fontes
+- ✅ Verificar contraste para acessibilidade visual
+
+#### Outros links
+
+ - [W3 WCAG](https://www.w3.org/Translations/WCAG20-pt-br/)

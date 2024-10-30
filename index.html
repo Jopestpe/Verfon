@@ -13,36 +13,79 @@
 
 <body>
     <div class="barra">
-        <input id="EntradaDeArquivo" type="file" multiple>
-        <button aria-label="importar fonte" class="barra_opcao" id="BotaoEntradaDeArquivo">Importar fonte</button>
+        <input class="ocultar" id="EntradaDeArquivo" type="file" multiple>
+        <button aria-label="importar fonte" class="barra_opcao acao" id="BotaoEntradaDeArquivo">Importar fonte</button>
+
+        <button class="entrada_cor acao" aria-label="cor dos caracteres" id="BotaoCorDosCaracteres" type="color"></button>
+        <input class="ocultar" id="CorDosCaracteres" type="color">
+
+        <button class="trocar_cor acao" id="trocar_texto_fundo">⬌</button>
+
+        <button class="entrada_cor acao" aria-label="cor de fundo dos caracteres" id="BotaoCorDeFundo" type="color"></button>
+        <input class="ocultar" id="CorDeFundo" type="color">
+
+        <button class="trocar_cor acao" id="trocar_fundo_contorno">⬌</button>
+
+        <button class="entrada_cor acao" aria-label="cor do contorno dos caracteres" id="BotaoCorDoContorno" type="color"></button>
+        <input class="ocultar" id="CorDoContorno" type="color">
+
+        <span id="contraste"></span>
+
+        <select class="barra_opcao acao" id="selecionar_estilo" onchange="alterar_estilo()">
+            <option value="normal">Normal</option>
+            <option value="italic">Itálico</option>
+            <option value="oblique">oblique</option>
+            <option value="small-caps">small-caps</option>
+            <option value="underline">Sublinhado</option>
+        </select>
+
+        <select class="barra_opcao acao" id="selecionar_fonte" onchange="alterar_fonte()">
+            <option value="">Fonte padrão</option>
+        </select>
+
+        <select class="barra_opcao acao" id="selecionar_fonte2" onchange="alterar_fonte2()">
+            <option value="">Fonte 2 padrão</option>
+        </select>
+
+    </div>
+
+    <div class="bloco_caracteres">
+        <textarea id="Caracteres" aria-label="Caracteres"></textarea>
+        <textarea id="Caracteres2" aria-label="Caracteres para comparar"></textarea>
+    </div>
+
+    <div class="barra">
         <div class="barra_opcao"> 
             <button aria-label="página anterior" class="seta" id="pagina_anterior">◀</button>
             <input id="PaginasDeCaractere" type="number" value="1" min="1" aria-label="Páginas de caractere">
             <button aria-label="proxima página" class="seta" id="proxima_pagina">▶</button>
         </div>
+
         <div class="barra_opcao"> 
             <button aria-label="diminuir caracter" class="seta" id="tamanho_caracter_menos">◀</button>
             <input id="TamanhoDosCaracteres" type="number" value="44" min="1" aria-label="Tamanho dos caracteres">
             <button aria-label="aumentar caracter" class="seta" id="tamanho_caracter_mais">▶</button>
         </div>
+
         <div class="barra_opcao"> 
             <button aria-label="aumentar contorno" class="seta" id="tamanho_contorno_menos">◀</button>
             <input id="TamanhoDoContorno" type="number" value="0" min="0" aria-label="Tamanho do contorno">
             <button aria-label="diminuir contorno" class="seta" id="tamanho_contorno_mais">▶</button>
         </div>
 
-        <button aria-label="cor dos caracteres" id="BotaoCorDosCaracteres" type="color"></button>
-        <input id="CorDosCaracteres" type="color">
-        <button aria-label="cor de fundo dos caracteres" id="BotaoCorDeFundo" type="color"></button>
-        <input id="CorDeFundo" type="color">
-        <button aria-label="cor do contorno dos caracteres" id="BotaoCorDoContorno" type="color"></button>
-        <input id="CorDoContorno" type="color">
+        <div class="barra_opcao"> 
+            <button aria-label="aumentar espaçamento" class="seta" id="espacamento_menos">◀</button>
+            <input id="TamanhoDoEspacamento" type="number" value="0" min="0" aria-label="Tamanho do espaçamento">
+            <button aria-label="diminuir espaçamento" class="seta" id="espacamento_mais">▶</button>
+        </div>
 
-        <select class="barra_opcao" id="selecionar_fonte" onchange="alterar_fonte()">
-            <option value="">Fonte padrão</option>
-        </select>
+        <div class="barra_opcao"> 
+            <button aria-label="aumentar espaçamento" class="seta" id="espessura_menos">◀</button>
+            <input id="TamanhoDoEspessura" type="number" value="400" min="100" aria-label="Tamanho do espaçamento">
+            <button aria-label="diminuir espaçamento" class="seta" id="espessura_mais">▶</button>
+        </div>
+
     </div>
-    <textarea id="Caracteres" aria-label="Caracteres"></textarea>
 </body>
 
 </html>
