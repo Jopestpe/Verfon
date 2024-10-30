@@ -20,6 +20,9 @@ Verfon é uma página para carregar e visualizar caracteres
 
 - [Adobe color contrast analyzar](https://color.adobe.com/pt/create/color-contrast-analyzer)
 
+#### PrintScreen
+![print](https://github.com/user-attachments/assets/12b3f28d-9b1a-4a06-9b8e-ee986cc6c680)
+
 #### Outros links
 
  - [W3 WCAG](https://www.w3.org/Translations/WCAG20-pt-br/)
