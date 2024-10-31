@@ -23,3 +23,4 @@ Verfon é uma página para carregar e visualizar caracteres
 #### Outros links
 
  - [W3 WCAG](https://www.w3.org/Translations/WCAG20-pt-br/)
+ - [Samsa variable font inspector](https://www.axis-praxis.org/samsa/)
