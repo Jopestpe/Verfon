@@ -118,7 +118,8 @@ function DefinirPaginasDeCaractere(Pagina) {
 }
 DefinirPaginasDeCaractere(PaginasDeCaractere.value);
 function trocar_pagina(numero) {
-    if (PaginasDeCaractere.value == 1 && numero < 0) {
+    if ((PaginasDeCaractere.value == 1 && numero < 0) 
+        || (PaginasDeCaractere.value >= 1000 && numero > 0)) {
         return;
     }
     PaginasDeCaractere.value = parseFloat(PaginasDeCaractere.value) + numero;
@@ -146,7 +147,8 @@ function DefinirTamanhoDosCaracteres(Tamanho) {
 }
 DefinirTamanhoDosCaracteres(TamanhoDosCaracteres.value);
 function trocar_tamanho_caracter(numero) {
-    if (TamanhoDosCaracteres.value == 1 && numero < 0) {
+    if ((TamanhoDosCaracteres.value == 1 && numero < 0)
+    || (TamanhoDosCaracteres.value >= 3000 && numero > 0)) {
         return;
     }
     TamanhoDosCaracteres.value = parseFloat(TamanhoDosCaracteres.value) + numero;
@@ -243,8 +245,8 @@ document.getElementById('espacamento_menos').addEventListener('mousedown', funct
 //
 const TamanhoDoEspessura = document.getElementById('TamanhoDoEspessura');
 function trocar_tamanho_espessura(numero) {
-    if ((TamanhoDoEspessura.value == 100 && numero < 0)
-        || (TamanhoDoEspessura.value == 800 && numero > 0)) { return; }
+    if ((TamanhoDoEspessura.value <= 100 && numero < 0)
+        || (TamanhoDoEspessura.value >= 800 && numero > 0)) { return; }
     TamanhoDoEspessura.value = parseFloat(TamanhoDoEspessura.value) + numero;
     Caracteres.style.fontWeight = TamanhoDoEspessura.value;
 }

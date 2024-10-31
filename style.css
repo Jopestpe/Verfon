@@ -47,7 +47,7 @@ body {
 	display: flex;
 	flex-direction: column;
 	background-color: var(--cor-fundo);
-	justify-content:space-evenly;
+	justify-content: space-evenly;
 	align-items: center;
 }
 
@@ -67,32 +67,50 @@ body {
 	display: none;
 }
 
-.barra_opcao {
-	height: var(--altura-4);
-	display: flex;
-	max-width: min-content;
-	justify-content: space-between;
-	text-decoration: none;
-	text-align: center;
-	align-items: center;
-	border: var(--borda-normal);
-	border-radius: var(--raio-borda);
-	white-space: nowrap;
-	background-color: transparent;
-}
-
 .barra select,
 .barra button {
 	padding-inline: var(--espaco-1);
 }
 
-.barra_opcao * {
-	border: none;
+.barra_opcao {
+	display: flex;
 	background-color: transparent;
-	height: 100%;
-	width: auto;
-	aspect-ratio: 1/1;
+	height: var(--altura-4);
+	width: max-content;
+	border: var(--borda-normal);
+	border-radius: var(--raio-borda);
+	white-space: nowrap;
+	text-align: center;
+	text-decoration: none;
+	align-items: center;
+	overflow: hidden;
 }
+
+.controle {
+    display: flex;
+    aspect-ratio: 3 / 1;
+    height: var(--altura-4);
+	border: var(--borda-normal);
+	border-radius: var(--raio-borda);
+}
+
+.controle * {
+	appearance: textfield;
+  	-moz-appearance: textfield;
+    width: 33.33%;
+    height: 100%;
+    display: flex;
+	align-items: center;
+	justify-content: center;
+    text-align: center;
+    background-color: transparent;
+	border: none;
+}
+
+.seta:hover {
+	cursor: pointer;
+	color: var(--cor-azul);
+} 
 
 .trocar_cor,
 .entrada_cor {
@@ -100,25 +118,13 @@ body {
 	height: var(--altura-4);
 	aspect-ratio: 1/1;
 	text-align: center;
-	background-color: transparent; 
+	background-color: transparent;
 	border: var(--borda-normal);
 	border-radius: var(--raio-borda);
 }
 
 .trocar_cor {
-	
 	border: var(--sem-borda);
-}
-
-.seta:hover {
-	cursor: pointer;
-	color: var(--cor-azul);
-}
-
-.barra_opcao input[type=number] {
-	appearance: textfield;
-	-moz-appearance: textfield;
-	text-align: center;
 }
 
 #BotaoCorDosCaracteres {
@@ -167,6 +173,8 @@ body {
 	-webkit-text-stroke-color: var(--cor-fundo);
 	font-weight: 400;
 	padding: var(--espaco-1);
+	overflow-x: hidden;
+	overflow-y: scroll;
 }
 
 #Caracteres2 {
@@ -196,7 +204,7 @@ input::-webkit-inner-spin-button {
 	white-space: nowrap;
 }
 
- @-moz-document url-prefix() {
+@-moz-document url-prefix() {
 	* {
 		scrollbar-color: var(--cor-azul) transparent;
 	}
@@ -222,7 +230,14 @@ input::-webkit-inner-spin-button {
 		cursor: pointer;
 		background-color: var(--cor-azul);
 	}
+
 	.trocar_cor {
-		font-size: var(--tamanho-fonte);
+		font-size: 100%
 	}
-} 
+}
+
+.opcoes option {
+	background-color: var(--cor-fundo);
+	color: var(--cor-texto);
+	text-align: start;
+}
