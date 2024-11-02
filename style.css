@@ -51,6 +51,10 @@ body {
 	align-items: center;
 }
 
+.ocultar {
+	display: none;
+}
+
 .barra {
 	display: flex;
 	width: 100%;
@@ -63,10 +67,6 @@ body {
 	padding-block: var(--espaco-1);
 }
 
-.ocultar {
-	display: none;
-}
-
 .barra select,
 .barra button {
 	padding-inline: var(--espaco-1);
@@ -74,9 +74,9 @@ body {
 
 .barra_opcao {
 	display: flex;
-	background-color: transparent;
 	height: var(--altura-4);
-	width: max-content;
+	flex-shrink: 0;
+	background-color: transparent;
 	border: var(--borda-normal);
 	border-radius: var(--raio-borda);
 	white-space: nowrap;
@@ -84,6 +84,7 @@ body {
 	text-decoration: none;
 	align-items: center;
 	overflow: hidden;
+	flex-shrink: 0; 
 }
 
 .controle {
