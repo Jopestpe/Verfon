@@ -291,6 +291,7 @@ document.getElementById("trocar_texto_fundo").addEventListener("click", function
     document.getElementById('BotaoCorDeFundo').style.backgroundColor = cor_texto;
     Caracteres.style.color = cor_fundo;
     Caracteres.style.backgroundColor = cor_texto;
+    atualizar_acessibilidade();
 });
 document.getElementById("trocar_fundo_contorno").addEventListener("click", function () {
     const cor_fundo = window.getComputedStyle(document.getElementById('BotaoCorDeFundo')).backgroundColor;
@@ -299,6 +300,7 @@ document.getElementById("trocar_fundo_contorno").addEventListener("click", funct
     document.getElementById('BotaoCorDoContorno').style.backgroundColor = cor_fundo;
     Caracteres.style.backgroundColor = cor_contorno;
     Caracteres.style.webkitTextStrokeColor = cor_fundo;
+    atualizar_acessibilidade();
 });
 //
 function rbga_para_luminancia(rgba) {
@@ -327,3 +329,9 @@ function atualizar_acessibilidade() {
     document.getElementById('contraste').textContent = `${contraste.toFixed(2)} : 1`;
 }
 atualizar_acessibilidade()
+// PWA
+if ('serviceWorker' in navigator) {
+    navigator.serviceWorker.register('/sw.js')
+      .then(reg => console.log('PWA registrado'))
+      .catch(err => console.log('Falha ao registrar PWA'));
+}
