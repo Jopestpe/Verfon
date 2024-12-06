@@ -329,9 +329,3 @@ function atualizar_acessibilidade() {
     document.getElementById('contraste').textContent = `${contraste.toFixed(2)} : 1`;
 }
 atualizar_acessibilidade()
-// PWA
-if ('serviceWorker' in navigator) {
-    navigator.serviceWorker.register('/sw.js')
-      .then(reg => console.log('PWA registrado'))
-      .catch(err => console.log('Falha ao registrar PWA'));
-}
