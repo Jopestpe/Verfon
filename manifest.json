@@ -1,8 +1,9 @@
 {
   "name": "Verfon",
   "short_name": "Verfon",
-  "description": "Página para carregar e visualizar caracteres",
+  "description": "Pagina para carregar e visualizar caracteres",
   "start_url": "index.html",
+  "scope": ".",
   "display": "standalone",
   "background_color": "#111111",
   "theme_color": "#fffadf",
